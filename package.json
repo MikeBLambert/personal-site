@@ -1,0 +1,19 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeBLambert/personal-site.git"
+  },
+  "author": "Mike Lambert <mlamb128@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeBLambert/personal-site/issues"
+  },
+  "homepage": "https://github.com/MikeBLambert/personal-site#readme"
+}
