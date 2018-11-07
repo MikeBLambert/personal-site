@@ -38,6 +38,7 @@ main #portfolio .project {
             border: 10px solid black;
             margin: 10px;
             box-shadow: 5px 5px #162059;
+            /* border-radius: 10px; */
             opacity: 0.5;
         }
 
@@ -77,6 +78,10 @@ main #portfolio img {
             color: #A6A2A2;
             padding: 10px;
             flex-basis: auto;
+        }
+
+        #desktop-nav a:hover {
+            color: white;
         }
 }
 
@@ -192,6 +197,10 @@ main #portfolio img {
             text-align: center;
             padding: 10px;
             transition: color 0.3s ease;
+        }
+
+        #mobile-menu-content a:hover { 
+            color: white;
         }
 }
 
