@@ -4,12 +4,13 @@ body {
 }
 
 
-.mobile-menu-content {
-    display: none;
-}
 
 @media (min-width: 451px) {
-    .menu-content {
+    
+    #menuToggle {
+        display: none;
+    }
+    #menu-content {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -19,7 +20,7 @@ body {
     }
 
 
-        .menu-content a {
+        #menu-content a {
             text-decoration: none;
             color: #a3bbad;
             padding: 10px;
@@ -29,8 +30,12 @@ body {
 }
 
 @media (max-width: 450px) {
-    .menu-content {
+    #menu-content {
         display: none;
+    }
+
+    #menuToggle {
+        margin: 10px 0px 0px 10px;
     }
 
         #menuToggle input {
@@ -40,10 +45,8 @@ body {
             position: absolute;
             top: -7px;
             left: -5px;
-            
             cursor: pointer;
-            
-            opacity: 0; /* hide this */
+            opacity: 0;
             z-index: 2;
         }
 
@@ -104,25 +107,36 @@ body {
         #menuToggle input:checked ~ span:nth-last-child(2) {
             -webkit-transform: rotate(-45deg) translate(0, -1px);
                     transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menuToggle input:checked ~ #mobile-menu-content {
+            -webkit-transform: none;
+                    transform: none;
+            opacity: 1;
         } 
 
-
-
-    .mobile-menu-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: red; 
-    width: 100%;
-    box-shadow: 2px;
+    #mobile-menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: red; 
+        width: 100%;
+        box-shadow: 2px;
+        opacity: 0;
+        z-index: 2;-webkit-transform-origin: 0% 0%;transform-origin: 0% 0%;
+        -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0);
+        transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
-
-        .mobile-menu-content a {
+        #mobile-menu-content a {
             text-decoration: none;
             color: #a3bbad;
             text-align: center;
             padding: 10px;
+            transition: color 0.3s ease;
         }
 }
 
