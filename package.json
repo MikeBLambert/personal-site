@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "postcss css/*.css -d build/css --watch"    
+    "build:css": "postcss css/*.css -d build/css --watch"
   },
   "repository": {
     "type": "git",
