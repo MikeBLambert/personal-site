@@ -30,6 +30,17 @@ main #portfolio {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
+main #portfolio .project:hover {
+            opacity: 1;
+        }
+
+main #portfolio .project {
+            border: 10px solid black;
+            margin: 10px;
+            box-shadow: 5px 5px #162059;
+            opacity: 0.5;
+        }
+
 main #portfolio h1 {
             grid-column-start: 1;
             grid-column-end: -1;

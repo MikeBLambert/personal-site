@@ -26,7 +26,17 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         
-        
+        .project:hover {
+            opacity: 1;
+        }
+
+        .project {
+            border: 10px solid black;
+            margin: 10px;
+            box-shadow: 5px 5px #162059;
+            opacity: 0.5;
+        }
+
         h1 {
             grid-column-start: 1;
             grid-column-end: -1;
