@@ -26,16 +26,15 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         
-        .project:hover {
-            opacity: 1;
-        }
-
         .project {
             border: 10px solid black;
             margin: 10px;
             box-shadow: 5px 5px #162059;
             /* border-radius: 10px; */
             opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
         }
 
         h1 {
@@ -78,10 +77,9 @@ main {
             color: #A6A2A2;
             padding: 10px;
             flex-basis: auto;
-        }
-
-        a:hover {
-            color: white;
+            &:hover {
+                color: white;
+            }
         }
     }
 }
@@ -185,10 +183,9 @@ main {
             text-align: center;
             padding: 10px;
             transition: color 0.3s ease;
-        }
-
-        a:hover { 
-            color: white;
+            &:hover {
+                color: white;
+            }
         }
     }
 }

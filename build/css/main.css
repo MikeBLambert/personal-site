@@ -79,10 +79,9 @@ main #portfolio img {
             padding: 10px;
             flex-basis: auto;
         }
-
-        #desktop-nav a:hover {
-            color: white;
-        }
+            #desktop-nav a:hover {
+                color: white;
+            }
 }
 
 @media (max-width: 500px) {
@@ -198,10 +197,9 @@ main #portfolio img {
             padding: 10px;
             transition: color 0.3s ease;
         }
-
-        #mobile-menu-content a:hover { 
-            color: white;
-        }
+            #mobile-menu-content a:hover {
+                color: white;
+            }
 }
 
 
