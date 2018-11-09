@@ -54,8 +54,9 @@ main #portfolio .project {
             margin: 20px;
             box-shadow: 5px 5px #162059;
             border-radius: 25px;
-            opacity: 0.5;
         }
+
+/* opacity: 0.5; */
 
 main #portfolio .project:hover {
                 opacity: 1;
@@ -253,20 +254,65 @@ main #contact #icons #linkedin:hover {
 
 /* ANIMATIONS */
 
-@-webkit-keyframes fade-in {
+/* @keyframes fade-in {
     0% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: 0.5; }
+} */
+
+@-webkit-keyframes fadeIn{
+    0% {
+        opacity:0;
+        -webkit-transform:  translate(-1500px,0px)  ;
+                transform:  translate(-1500px,0px)  ;
+    }
+    60% {
+        opacity:0.35;
+        -webkit-transform:  translate(30px,0px)  ;
+                transform:  translate(30px,0px)  ;
+    }
+    80% {
+        -webkit-transform:  translate(-10px,0px);
+                transform:  translate(-10px,0px);
+    }
+    100% {
+        opacity:0.5;
+        -webkit-transform:  translate(0px,0px);
+                transform:  translate(0px,0px);
+    }
 }
 
-@keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes fadeIn{
+    0% {
+        opacity:0;
+        -webkit-transform:  translate(-1500px,0px)  ;
+                transform:  translate(-1500px,0px)  ;
+    }
+    60% {
+        opacity:0.35;
+        -webkit-transform:  translate(30px,0px)  ;
+                transform:  translate(30px,0px)  ;
+    }
+    80% {
+        -webkit-transform:  translate(-10px,0px);
+                transform:  translate(-10px,0px);
+    }
+    100% {
+        opacity:0.5;
+        -webkit-transform:  translate(0px,0px);
+                transform:  translate(0px,0px);
+    }
 }
 
-.fadeIn {
-    -webkit-animation-name: fade-in;
-            animation-name: fade-in;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+.fade-in {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    display: block;
+    opacity: 0.5;
+}
+
+.display-none {
+    opacity: 0;
 }
 
