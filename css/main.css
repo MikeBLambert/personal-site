@@ -1,3 +1,6 @@
+$darkblue: #162059;
+$lightgrey: #A6A2A2;
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -46,7 +49,7 @@ main {
         .project {
             border: 10px solid black;
             margin: 20px;
-            box-shadow: 5px 5px #162059;
+            box-shadow: 5px 5px $darkblue;
             border-radius: 25px;
             /* opacity: 0.5; */
             &:hover {
@@ -95,14 +98,11 @@ main {
 
 
     #desktop-nav {
-        /* position: absolute; */
-        /* position: sticky;  */
         top: 0;
-        /* margin-top: 100vh; */
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        background-color: #162059; 
+        background-color: $darkblue; 
         width: 100%;
         box-shadow: 2px;
         z-index: 90000000;
@@ -110,7 +110,8 @@ main {
         a {
             text-decoration: none;
             font-size: 20px;
-            color: #A6A2A2;
+            color: $lightgrey;
+
             padding: 20px 0px 20px 0px;
             flex-basis: auto;
             &:hover {
@@ -125,40 +126,12 @@ main {
         display: none;
     }
 
-    /* main {
-        margin-top: 100vh;
-    } */
-
     #mobile-nav {
         margin: 10px 0px 0px 10px;
         position: fixed;
         top: 0;
         width: 50%;   
         z-index: 999999;     
-
-        /* input { */
-            /* display: block; */
-            /* width: 40px;
-            height: 32px;
-            position: absolute;
-            top: -7px;
-            left: -5px;
-            cursor: pointer;
-            opacity: 0;
-        } */
-
-        /* span {
-            display: block;
-            width: 33px;
-            height: 4px;
-            margin-bottom: 5px;            background: #cdcdcd;
-            border-radius: 3px;
-            z-index: 1;
-            transform-origin: 4px 0px;
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                        opacity 0.55s ease;
-        } */
        
         input {
             width: 40px;
@@ -167,23 +140,33 @@ main {
             cursor: pointer;
             top: -7px;
             left: -5px;
-            /* opacity: 0; */
+            opacity: 0;
+            z-index: 9999999;
         }
 
         input:checked ~ span::before {
             transform: rotate(45deg) translate(0px, -1px);
             top: 3px;
-            background: black;
+            background: $darkblue;
         }
 
         input:checked ~ span::after {
-            transform: rotate(-45deg) translate(-1px, -1px);
+            transform: rotate(-45deg) translate(0px, -1px);
             top: -1px;
-            background: black;
+            background: $darkblue;
+        }
+
+        input:checked ~ span {
+            background: rgba(0,0,0,0)
+        }
+
+        input:checked ~ #mobile-menu-content {
+            transform: none;
+            opacity: 1;
         }
 
         .hamburger {
-            background: #cdcdcd;
+            background: $lightgrey;
             width: 33px;
             min-height: 4px;
             height: 4px;
@@ -191,11 +174,14 @@ main {
             border-radius: 2px;
             margin-top: 7px;
             margin-left: 2px;
+            transition: 0.5s;
             &::before, &::after {
+                transition: 0.5s;
                 border-radius: 2px;
                 display: block;
                 height: 4px;
-                background: #cdcdcd;
+                background: $lightgrey;
+                /* border: 1px solid $darkblue; */
                 content: '';
                 display: block;
                 position: relative;
@@ -238,10 +224,11 @@ main {
     } 
 
     #mobile-menu-content {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: #162059; 
+        background-color: $darkblue; 
         width: 100%;
         box-shadow: 2px;
         opacity: 0;
@@ -251,10 +238,9 @@ main {
 
         a {
             text-decoration: none;
-            color: #a3bbad;
+            color: $lightgrey;
             text-align: center;
             padding: 10px;
-            /* border: 1px solid #a3bbad; */
             transition: color 0.3s ease;
             &:hover {
                 color: white;
