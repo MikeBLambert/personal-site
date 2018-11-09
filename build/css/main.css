@@ -143,9 +143,7 @@ main #contact .icons #linkedin:hover {
         position: fixed;
         top: 0;
         width: 50%;   
-        z-index: 999999;     
-
-        /* input { */
+        z-index: 999999;
 
 
         /* span:first-child {
@@ -196,7 +194,7 @@ main #contact .icons #linkedin:hover {
             cursor: pointer;
             top: -7px;
             left: -5px;
-            opacity: 0;
+            /* opacity: 0; */
         }
             /* width: 40px;
             height: 32px;
@@ -208,10 +206,21 @@ main #contact .icons #linkedin:hover {
         } */
 
         #mobile-nav input:checked ~ span::before {
-            -webkit-transform: rotate(45deg) translate(-2px, -1px);
-                    transform: rotate(45deg) translate(-2px, -1px);
+            -webkit-transform: rotate(45deg) translate(0px, -1px);
+                    transform: rotate(45deg) translate(0px, -1px);
+            top: 3px;
+            background: black;
         }
             /* display: block; */
+
+        #mobile-nav input:checked ~ span::after {
+            -webkit-transform: rotate(-45deg) translate(-1px, -1px);
+                    transform: rotate(-45deg) translate(-1px, -1px);
+            top: -1px;
+            background: black;
+        }     
+
+        /* input { */
 
         #mobile-nav .hamburger {
             background: #cdcdcd;
@@ -220,6 +229,8 @@ main #contact .icons #linkedin:hover {
             height: 4px;
             display: block;
             border-radius: 2px;
+            margin-top: 7px;
+            margin-left: 2px;
         }
             #mobile-nav .hamburger::before, #mobile-nav .hamburger::after {
                 border-radius: 2px;
