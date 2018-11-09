@@ -1,17 +1,29 @@
-window.onscroll = function() {makeSticky()};
+window.onscroll = function() {makeFixed(), fadeIn()};
 
 let header = document.getElementById('myHeader');
 let nav = document.getElementById('desktop-nav');
-let intro = document.getElementById('intro');
+let portfolio = document.getElementById('portfolio');
 
-let sticky = nav.offsetTop;
+let project = document.getElementsByClassName('project')
 
-function makeSticky() {
-    if(window.pageYOffset > sticky) {
-        nav.classList.add('stick');
-        // intro.classList.add('hide');
-    } else {
-        nav.classList.remove('sticky');
-        // intro.classList.remove('hide');
+function makeFixed() {
+    if(window.pageYOffset >= header.offsetHeight) {
+        nav.classList.add('fix');
+        portfolio.classList.add('portfolioOffset');
+
+    } else if (header.offsetHeight > window.pageYOffset) {
+        nav.classList.remove('fix');
+        portfolio.classList.remove('portfolioOffset')
     }
 }
+
+function fadeIn() {
+    if(window.pageYOffset >= nav.offsetHeight) {
+        project[0].style.animationName = 'fade-in';
+        project[0].style.animationDuration = '5s';
+    } else {
+        // console.log(project[0].style)
+        project[0].style.display = 'none';
+    }
+}
+
