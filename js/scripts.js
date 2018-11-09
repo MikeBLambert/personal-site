@@ -5,6 +5,9 @@ const nav = document.getElementById('desktop-nav');
 const portfolio = document.getElementById('portfolio');
 const projects = document.getElementsByClassName('project');
 
+const contact = document.getElementById('contact');
+const contactIcons = document.getElementsByClassName('icons');
+
 
 function makeFixed() {
     if(window.pageYOffset >= header.offsetHeight) {
@@ -19,7 +22,7 @@ function makeFixed() {
 
 const fadeIn = function (parent, children) {
     if(window.pageYOffset + window.innerHeight >= parent.offsetHeight) {
-        Array.from(children).forEach((child, index) => {
+        Array.from(children).forEach(child => {
             child.classList.add('fade-in');
             child.classList.remove('display-none');
         })
@@ -28,7 +31,10 @@ const fadeIn = function (parent, children) {
 
 window.onscroll = function() {
     makeFixed(), 
-    fadeIn(portfolio, projects)
+    fadeIn(portfolio, projects),
+    fadeIn(contact, contactIcons)
 };
+
+
 
 

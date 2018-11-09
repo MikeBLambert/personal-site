@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="build/css/main.css">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <title>Mike Lambert</title>
     </head>
     <body>
@@ -19,30 +20,27 @@
             </div> 
             
         </header>
-                <nav>
-                    <div id="mobile-nav">
-                        
-                        <input type="checkbox"/>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        
-                        <div id="mobile-menu-content">
-                            <a href="#main">{ M:L }</a>            
-                            <a href="#about">ABOUT</a>
-                            <a href="#portfolio">PORTFOLIO</a>
-                            <a href="#blog">BLOG</a>  
-                            <a href="#contact">CONTACT</a>
-                        </div>    
-                    </div>
-                    <div id="desktop-nav">
+            <nav>
+                <div id="mobile-nav">
+                    
+                    <input type="checkbox"/>
+                        <span class="hamburger"></span>                          
+                    <div id="mobile-menu-content">
+                        <a href="#main">{ M:L }</a>            
                         <a href="#about">ABOUT</a>
                         <a href="#portfolio">PORTFOLIO</a>
-                        <a href="#main">{ M:L }</a>            
                         <a href="#blog">BLOG</a>  
                         <a href="#contact">CONTACT</a>
-                    </div>     
-                </nav>
+                    </div>    
+                </div>
+                <div id="desktop-nav">
+                    <a href="#about">ABOUT</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#main">{ M:L }</a>            
+                    <a href="#blog">BLOG</a>  
+                    <a href="#contact">CONTACT</a>
+                </div>     
+            </nav>
         <main>
             <div id="about"><h1></h1></div>
             <div id="portfolio">
@@ -66,12 +64,13 @@
                         <h3>Even Awesomer Project</h3>
                         <img src="./img/portfolio/crypto.png" alt="cryptocurrency trading simulator screenshot">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo provident, corrupti dignissimos deserunt doloremque maxime. Minus ipsam cupiditate optio vel veniam iure aperiam. Aut, voluptatibus magni nobis asperiores harum sapiente?</p>
+
                 </div>
             </div>
             <div id="blog"></div>
             <div id="contact">
                 <h1>Contact</h1>
-                <div id="icons">
+                <div class="icons display-none">
                     <a id="gmail"><i class="far fa-envelope" ></i></a>
                     <a id="linkedin"><i class="fab fa-linkedin-in"></i></a>
                     <a id=github><i class="fab fa-github"></i></a>
@@ -80,6 +79,7 @@
 
         </main>
     </body>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js">AOS.init();</script>
     <script src="js/scripts.js"></script>
 
 </html>

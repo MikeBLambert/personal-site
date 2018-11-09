@@ -1,7 +1,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 header {
@@ -65,14 +65,14 @@ main {
     }
 
     #contact {
-        #icons {
+        .icons {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             i {
                 flex-basis: auto;
                 font-size: 70px;
-                opacity: 0.75;
+                /* opacity: 0.75; */
                 &:hover {
                     opacity: 1;
                 }
@@ -136,33 +136,70 @@ main {
         width: 50%;   
         z-index: 999999;     
 
-        input {
+        /* input { */
             /* display: block; */
-            width: 40px;
+            /* width: 40px;
             height: 32px;
             position: absolute;
             top: -7px;
             left: -5px;
             cursor: pointer;
             opacity: 0;
-        }
+        } */
 
-        span {
+        /* span {
             display: block;
             width: 33px;
             height: 4px;
-            margin-bottom: 5px;
-            /* position: relative; */
-            background: #cdcdcd;
+            margin-bottom: 5px;            background: #cdcdcd;
             border-radius: 3px;
             z-index: 1;
             transform-origin: 4px 0px;
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                         background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                         opacity 0.55s ease;
+        } */
+       
+        input {
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            cursor: pointer;
+            top: -7px;
+            left: -5px;
+            opacity: 0;
         }
 
-        span:first-child {
+        input:checked ~ span::before {
+            transform: rotate(45deg) translate(-2px, -1px);
+        }
+
+        .hamburger {
+            background: #cdcdcd;
+            width: 33px;
+            min-height: 4px;
+            height: 4px;
+            display: block;
+            border-radius: 2px;
+            &::before, &::after {
+                border-radius: 2px;
+                display: block;
+                height: 4px;
+                background: #cdcdcd;
+                content: '';
+                display: block;
+                position: relative;
+            }
+            &:before {
+                top:-8px;
+            }
+            &:after {
+                top: 4px;
+            }
+        }
+
+
+        /* span:first-child {
             transform-origin: 0% 0%;
         }
 
@@ -173,7 +210,6 @@ main {
         input:checked ~ span {
             opacity: 1;
             transform: rotate(45deg) translate(-2px, -1px);
-            /* background: #232323; */
         }
         
         input:checked ~ span:nth-last-child(3) {
@@ -188,7 +224,7 @@ main {
         input:checked ~ #mobile-menu-content {
             transform: none;
             opacity: 1;
-        }
+        } */
     } 
 
     #mobile-menu-content {
@@ -247,7 +283,7 @@ main {
         transform:  translate(-10px,0px);
     }
     100% {
-        opacity:0.5;
+        opacity:0.75;
         transform:  translate(0px,0px);
     }
 }
@@ -256,7 +292,7 @@ main {
     animation-name: fadeIn;
     animation-duration: 1.5s;
     display: block;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .display-none {
