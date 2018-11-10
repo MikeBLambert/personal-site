@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="build/css/main.css">
-        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
         <title>Mike Lambert</title>
     </head>
     <body>
@@ -42,9 +43,108 @@
                 </div>     
             </nav>
         <main>
-            <div id="about"><h1></h1></div>
+            <div id="about">
+                <div id="about-intro">
+                    <h1>Hi there, I'm Mike.</h1>
+                    <h1>I like to code...</h1>
+                </div>
+                <div id="code">
+                    <div class="languages">
+                        <i class="fab fa-vuejs" id="vue"></i>
+                        <h4>Vue</h4>
+                    </div>
+                    <div class="languages">
+                        <i class="fab fa-react" id="react"></i>
+                        <h4>React</h4>
+                    </div>
+                    <div class="languages">
+                        <img src="img/logos/redux.png" id="redux">                    
+                        <h4>Redux</h4>
+                    </div>
+                    <div class="languages">
+                        <i class="fab fa-node" id="node"></i>     
+                        <h4>NodeJS</h4>               
+                    </div>
+                    <div class="languages">
+                        <i class="fab fa-js" id="js"></i>
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="languages">
+                        <i class="fab fa-html5" id="html"></i>                    
+                        <h4>HTML5</h4>
+                    </div>
+                    <div class="languages">
+                        <i class="fab fa-css3-alt" id="css"></i>                    
+                        <h4>CSS</h4>
+                    </div>
+                    <div class="languages">
+                        <img src="img/logos/postgresql.png" id="postgres">                    
+                    </div>
+                    <div class="languages">
+                        <img src="img/logos/mongo.png" id="mongo">  
+                        <h4>MongoDB</h4>                  
+                    </div>
+                    <div class="languages">
+                        <img src="img/logos/jest.png" id="jest">                 
+                        <h4>Jest</h4>
+                    </div>
+                    <div class="languages">
+                        <i class="fab fa-git" id="git"></i>                    
+                    </div>
+                    <div class="languages">
+                        <img src="img/logos/firebase.png" id="firebase"> 
+                        <h4>Firebase</h4>                
+                    </div>
+                </div>
+
+                <div id="study">    
+                    <h1>...and I love to study.</h1>
+                    <div id="degrees">
+                        <div class="schools">
+                            <img src="img/logos/university-of-washington.png" id="uw">
+                            <h2>Philosophy</h2>
+                        </div>
+                        <div class="schools">
+                            <img src="img/logos/nanjing-normal.jpg" id="nanjing-normal">
+                            <h2>Mandarin-Chinese</h2>
+                        </div>
+                        <div class="schools">
+                            <img src="img/logos/ie.png" id="ie">
+                            <h2>MBA</h2>
+                        </div>
+                        <div class="schools">
+                            <img src="img/logos/alchemy.png" id="alchemy">
+                            <h2>Software Engineering</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="travel">
+                <h1>I have lived in five countries...</h1>
+                <div id="map">
+                    <div class="img-container">
+                        <img src="http://res.cloudinary.com/reddelicious/image/upload/v1496891721/map_no-dots_mptb8a.png" alt="Map">
+                    </div>
+                    <div id="dots">
+                        <div class="dot dot-1"></div>
+                        <div class="dot dot-2"></div>
+                        <div class="dot dot-3"></div>
+                        <div class="dot dot-4"></div>
+                        <div class="dot dot-5"></div>
+                    </div>
+                </div>
+                
+                <div id="human-languages">
+                    <h1>...and speak four (human) languages.</h1>
+                    <iframe width="55%" height="300vh" src="https://www.youtube.com/embed/xDnxZbRdYy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        
+
             <div id="portfolio">
-                <h1>Portfolio</h1>
+                <h1>Here's some of my work</h1>
                 <div class="project display-none">
                     <h3>Cryptocurrency Trading Simulation</h3>
                     <img src="./img/portfolio/crypto.png" alt="cryptocurrency trading simulator screenshot">
@@ -79,7 +179,6 @@
 
         </main>
     </body>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js">AOS.init();</script>
     <script src="js/scripts.js"></script>
 
 </html>
