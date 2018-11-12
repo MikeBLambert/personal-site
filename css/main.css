@@ -5,6 +5,10 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     overflow-x: hidden;
+
+    .section-title {
+        font-size: 45px;
+    }
 }
 
 header {
@@ -21,7 +25,7 @@ header {
     }
 
     #intro {
-            font-family: 'Roboto', sans-serif;
+            /* font-family: 'Roboto', sans-serif; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -32,7 +36,9 @@ header {
             width: 100vw;
             color: white;
             h1, h2 {
-                margin: 0;
+                margin-top: 25vh;
+                margin-right: 25vw;
+                font-size: 50px;
             }
     }
 }
@@ -87,17 +93,27 @@ main {
                 align-items: flex-end;
 
                 .schools {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
                     opacity: 0.85;
+                    border: 5px solid black;
+                    border-radius: 10px;
+                    box-shadow: 3px 3px $darkblue;
+                    padding: 20px;
+                    width: 200px;
+                    height: 250px;
                     &:hover {
                         opacity: 1;
                     }
-                    #uw { width: 200px; }
-                    #nanjing-normal { width: 150px; }
-                    #ie { width: 150px; }
+                    #uw { width: 200px; text-align: center; }
+                    #nanjing-normal { width: 150px; align-self: center; }
+                    #ie { width: 150px; align-self: center; }
                     #alchemy { width: 200px; }
                 }
             }
         }
+
     }
 
     #travel {
@@ -111,6 +127,10 @@ main {
         margin-top: 25vh;
         iframe {
             margin-top: 5vh;
+            border: 5px solid black;
+            box-shadow: 2px 2px $darkblue;
+            border-radius: 10px;
+            margin-bottom: 25vh;
         }
     } 
 
@@ -119,14 +139,16 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         
-        .project {
+            .project {
             border: 10px solid black;
             margin: 20px;
             box-shadow: 5px 5px $darkblue;
             border-radius: 25px;
-            /* opacity: 0.5; */
+            background-color: white;
+            opacity: 0.75;
             &:hover {
                 opacity: 1;
+                cursor: pointer;
             }
             p {
                 font-family: 'Open Sans', sans-serif;
@@ -137,6 +159,7 @@ main {
         h1 {
             grid-column-start: 1;
             grid-column-end: -1;
+            margin-top: 15vh;
         }
 
         img {
@@ -218,6 +241,10 @@ main {
             left: -5px;
             opacity: 0;
             z-index: 9999999;
+        }
+        label {
+            position: absolute;
+            opacity: 0;
         }
 
         input:checked ~ span::before {
@@ -329,12 +356,9 @@ main {
     opacity: 0.75;
 }
 
-.display-none {
-    opacity: 0;
+.hidden {
+    display: none;
 }
-
-
-
 
 
 @keyframes pulse {
@@ -400,3 +424,31 @@ main {
         100% {box-shadow: 0px 0px 0px 10px rgba(52, 106, 180, 0.0);}
     }
 }
+
+
+.show-content {
+    display: block;
+}
+
+.modal-view {
+    flex-direction: row;
+    justify-content: center;
+}
+.modal-item {
+    /* width: 100vw;
+    height: 100vh;
+    margin-left: -50vw; */
+}
+
+/* .overlay {
+    background: rgba(0,0,0,0.75);
+    z-index: 9999999;
+} */
+
+#overlay {
+    background: rgba(0,0,0,0.75);
+    width: 100vw;
+    height: 100vw;
+}
+
+
