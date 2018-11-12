@@ -145,7 +145,7 @@ main {
             box-shadow: 5px 5px $darkblue;
             border-radius: 25px;
             background-color: white;
-            opacity: 0.75;
+            opacity: 1;
             &:hover {
                 opacity: 1;
                 cursor: pointer;
@@ -305,7 +305,8 @@ main {
         width: 100%;
         box-shadow: 2px;
         opacity: 0;
-        z-index: 2;transform-origin: 0% 0%;
+        z-index: 2;
+        transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
@@ -334,18 +335,14 @@ main {
 @keyframes fadeIn{
     0% {
         opacity:0;
-        /* transform:  translate(-1500px,0px)  ; */
+        transform: translate(-25px, -25px)
     }
-    60% {
-        opacity:0.35;
-        /* transform:  translate(30px,0px)  ; */
-    }
-    80% {
-        /* transform:  translate(-10px,0px); */
+    50% {
+        opacity:0.5;
     }
     100% {
-        opacity:0.75;
-        transform:  translate(0px,0px);
+        opacity:1.0;
+        transform: translate(0px; 0px)
     }
 }
 
@@ -430,25 +427,55 @@ main {
     display: block;
 }
 
+
 .modal-view {
     flex-direction: row;
     justify-content: center;
-}
-.modal-item {
-    /* width: 100vw;
-    height: 100vh;
-    margin-left: -50vw; */
+    padding: 15px;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
 }
 
-/* .overlay {
-    background: rgba(0,0,0,0.75);
-    z-index: 9999999;
-} */
+.modal-item {
+    position: relative;
+    opacity: 1;
+    width: 75vw;
+
+    p { 
+        font-size: 18px; 
+        text-align: center; 
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    h3 { font-size: 35px; }
+    h4 { margin: 0; }
+
+    .project-details {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        ul {
+            margin-left: 5vw;
+            padding: 0;
+            display: inline;
+            text-align: left;
+            margin-top: 0;
+            li {
+                margin-left: 15px;
+            }
+        }
+    }
+    .modal-image {
+    }
+}
 
 #overlay {
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
     background: rgba(0,0,0,0.75);
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    position: fixed;
 }
-
-

@@ -168,7 +168,7 @@ main #portfolio .project {
             box-shadow: 5px 5px #162059;
             border-radius: 25px;
             background-color: white;
-            opacity: 0.75;
+            opacity: 1;
         }
 
 main #portfolio .project:hover {
@@ -334,7 +334,9 @@ main #contact .icons #linkedin:hover {
         width: 100%;
         box-shadow: 2px;
         opacity: 0;
-        z-index: 2;-webkit-transform-origin: 0% 0%;transform-origin: 0% 0%;
+        z-index: 2;
+        -webkit-transform-origin: 0% 0%;
+                transform-origin: 0% 0%;
         -webkit-transform: translate(-100%, 0);
                 transform: translate(-100%, 0);
         transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -366,38 +368,32 @@ main #contact .icons #linkedin:hover {
 @-webkit-keyframes fadeIn{
     0% {
         opacity:0;
-        /* transform:  translate(-1500px,0px)  ; */
+        -webkit-transform: translate(-25px, -25px);
+                transform: translate(-25px, -25px)
     }
-    60% {
-        opacity:0.35;
-        /* transform:  translate(30px,0px)  ; */
-    }
-    80% {
-        /* transform:  translate(-10px,0px); */
+    50% {
+        opacity:0.5;
     }
     100% {
-        opacity:0.75;
-        -webkit-transform:  translate(0px,0px);
-                transform:  translate(0px,0px);
+        opacity:1.0;
+        -webkit-transform: translate(0px; 0px);
+                transform: translate(0px; 0px)
     }
 }
 
 @keyframes fadeIn{
     0% {
         opacity:0;
-        /* transform:  translate(-1500px,0px)  ; */
+        -webkit-transform: translate(-25px, -25px);
+                transform: translate(-25px, -25px)
     }
-    60% {
-        opacity:0.35;
-        /* transform:  translate(30px,0px)  ; */
-    }
-    80% {
-        /* transform:  translate(-10px,0px); */
+    50% {
+        opacity:0.5;
     }
     100% {
-        opacity:0.75;
-        -webkit-transform:  translate(0px,0px);
-                transform:  translate(0px,0px);
+        opacity:1.0;
+        -webkit-transform: translate(0px; 0px);
+                transform: translate(0px; 0px)
     }
 }
 
@@ -509,26 +505,62 @@ main #contact .icons #linkedin:hover {
     display: block;
 }
 
+
 .modal-view {
     flex-direction: row;
     justify-content: center;
-}
-.modal-item {
-    /* width: 100vw;
-    height: 100vh;
-    margin-left: -50vw; */
+    padding: 15px;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
 }
 
-/* .overlay {
-    background: rgba(0,0,0,0.75);
-    z-index: 9999999;
-} */
+.modal-item {
+    position: relative;
+    opacity: 1;
+    width: 75vw;
+}
+
+.modal-item p { 
+        font-size: 18px; 
+        text-align: center; 
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+.modal-item h3 { font-size: 35px; }
+
+.modal-item h4 { margin: 0; }
+
+.modal-item .project-details {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+.modal-item .project-details ul {
+            margin-left: 5vw;
+            padding: 0;
+            display: inline;
+            text-align: left;
+            margin-top: 0;
+        }
+
+.modal-item .project-details ul li {
+                margin-left: 15px;
+            }
+
+.modal-item .modal-image {
+    }
 
 #overlay {
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
     background: rgba(0,0,0,0.75);
-    width: 100vw;
-    height: 100vw;
-    position: 
+    width: 100%;
+    position: fixed;
 }
-
-
