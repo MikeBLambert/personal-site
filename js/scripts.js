@@ -1,38 +1,22 @@
 
 const nav = document.getElementById('desktop-nav');
 
-// const portfolio = document.getElementById('portfolio');
-// const projects = document.getElementsByClassName('project');
 
-// const contact = document.getElementById('contact');
-// const contactIcons = document.getElementsByClassName('icons');
-
-
-// function makeFixed() {
-//     if(window.pageYOffset >= header.offsetHeight) {
-//         nav.classList.add('fix');
-//         portfolio.classList.add('portfolioOffset');
+function makeFixed() {
+    if(window.pageYOffset >= header.offsetHeight) {
+        nav.classList.add('fix');
+        portfolio.classList.add('portfolioOffset');
         
-//     } else if (header.offsetHeight > window.pageYOffset) {
-//         nav.classList.remove('fix');
-//         portfolio.classList.remove('portfolioOffset')
-//     }
-// }
+    } else if (header.offsetHeight > window.pageYOffset) {
+        nav.classList.remove('fix');
+        portfolio.classList.remove('portfolioOffset')
+    }
+}
 
-// const fadeIn = function (parent, children) {
-//     if(window.pageYOffset + window.innerHeight >= parent.offsetHeight) {
-//         Array.from(children).forEach(child => {
-//             child.classList.add('fade-in');
-//             child.classList.remove('display-none');
-//         })
-//     }
-// }
 
-// window.onscroll = function() {
-//     makeFixed(), 
-//     fadeIn(portfolio, projects),
-//     fadeIn(contact, contactIcons)
-// };
+window.onscroll = function() {
+    makeFixed()
+};
 const header = document.getElementById('myHeader');
 const about = document.getElementById('about');
 const blog = document.getElementById('blog');
@@ -73,7 +57,7 @@ overlay.onclick = function() {
     // about.classList.remove('hidden');
     // blog.classList.remove('hidden');
     // contact.classList.remove('hidden');
-     
+
     portfolio.classList.remove('modal-view');
     portfolio.style.display = 'grid';
     overlay.style.display = 'none';

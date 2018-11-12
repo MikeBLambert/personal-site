@@ -191,22 +191,99 @@ main #portfolio img {
             width: 100%;
         }
 
+main #blog {
+        margin-top: 25vh;
+    }
+
+main #blog .article {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            align-items: center;
+            padding: 25px;
+            border-radius: 10px;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-bottom: 25px;
+        }
+
+main #blog .article button {
+                height: 10vh;
+                width: 35vh;
+                border-radius: 10px;
+                background: #162059;
+                color: white;
+                font-size: 18px;
+                border: 2px solid black;
+            }
+
+main #blog .article button:hover {
+                    cursor: pointer;
+                }
+
+main #blog .article .blog-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 50px;
+            }
+
+main #blog .article .blog-content h3 {
+                    width: 65%;
+                    font-size: 20px;
+                }
+
+main #blog .article .blog-content .blog-image {
+                    background-color: white;
+                    z-index: 999999;
+                    width: 65%;
+                    border: 5px solid black;
+                    box-shadow: 2px 2px #162059;
+                    border-radius: 10px;
+                }
+
+@media (max-width: 800px) {
+            main #blog .article {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+
+                main #blog .article button {
+                    margin-top: 25px;
+                }
+                main #blog .article .blog-content {
+                    margin: 0;
+
+                }
+                    main #blog .article .blog-content h3 { 
+                        width: 95%;
+                        font-size: 18px;
+                    }
+                    main #blog .article .blog-content img {
+                        width: 95%;
+                    }
+        }
+
+main #contact {
+        margin-top: 25vh;
+        margin-bottom: 50vh;
+    }
+
 main #contact .icons {
+            margin-top: 25vh;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;    
+            justify-content: space-around;
         }
+
+main #contact .icons a {
+                color: black;
+            }
 
 main #contact .icons i {
                 flex-basis: auto;
                 font-size: 70px;
             }
-
-/* opacity: 0.75; */
-
-main #contact .icons i:hover {
-                    opacity: 1;
-                }
 
 main #contact .icons #gmail:hover {
                 color: red;
@@ -216,12 +293,19 @@ main #contact .icons #linkedin:hover {
                 color: blue;
             }
 
+main #contact .icons #github{
+                opacity: 0.9;
+            }
+
+main #contact .icons #github:hover {
+                    opacity: 1;
+                }
+
 @media (min-width: 501px) {
     
     #mobile-nav {
         display: none;
     }
-
 
     #desktop-nav {
         top: 0;
@@ -365,50 +449,10 @@ main #contact .icons #linkedin:hover {
     margin-top: 70px;
 }
 
-@-webkit-keyframes fadeIn{
-    0% {
-        opacity:0;
-        -webkit-transform: translate(-25px, -25px);
-                transform: translate(-25px, -25px)
-    }
-    50% {
-        opacity:0.5;
-    }
-    100% {
-        opacity:1.0;
-        -webkit-transform: translate(0px; 0px);
-                transform: translate(0px; 0px)
-    }
-}
-
-@keyframes fadeIn{
-    0% {
-        opacity:0;
-        -webkit-transform: translate(-25px, -25px);
-                transform: translate(-25px, -25px)
-    }
-    50% {
-        opacity:0.5;
-    }
-    100% {
-        opacity:1.0;
-        -webkit-transform: translate(0px; 0px);
-                transform: translate(0px; 0px)
-    }
-}
-
-.fade-in {
-    -webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    display: block;
-    opacity: 0.75;
-}
-
 .hidden {
     display: none;
 }
+
 
 
 @-webkit-keyframes pulse {
@@ -417,18 +461,17 @@ main #contact .icons #linkedin:hover {
 }
 
 
+
 @keyframes pulse {
   0% {box-shadow: 0px 0px 0px 0px rgba(52, 106, 180, 1);} 
   100% {box-shadow: 0px 0px 0px 7px rgba(52, 106, 180, 0.0);}
 }
-
 
 #map {
 	position: relative;
 	max-width: 1280px;
 	margin: 0 auto;
 }
-
 
 #map img {
         width: 100%;
@@ -500,11 +543,49 @@ main #contact .icons #linkedin:hover {
         100% {box-shadow: 0px 0px 0px 10px rgba(52, 106, 180, 0.0);}
     }
 
-
 .show-content {
     display: block;
 }
 
+@-webkit-keyframes fadeIn{
+    0% {
+        opacity:0;
+        -webkit-transform: translate(-25px, -25px);
+                transform: translate(-25px, -25px)
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1.0;
+        -webkit-transform: translate(0px; 0px);
+                transform: translate(0px; 0px)
+    }
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity:0;
+        -webkit-transform: translate(-25px, -25px);
+                transform: translate(-25px, -25px)
+    }
+    50% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:1.0;
+        -webkit-transform: translate(0px; 0px);
+                transform: translate(0px; 0px)
+    }
+}
+
+.fade-in {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    display: block;
+}
 
 .modal-view {
     flex-direction: row;
