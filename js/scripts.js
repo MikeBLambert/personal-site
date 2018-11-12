@@ -1,7 +1,6 @@
 
 const nav = document.getElementById('desktop-nav');
 
-
 function makeFixed() {
     if(window.pageYOffset >= header.offsetHeight) {
         nav.classList.add('fix');
@@ -13,10 +12,10 @@ function makeFixed() {
     }
 }
 
-
 window.onscroll = function() {
     makeFixed()
 };
+
 const header = document.getElementById('myHeader');
 const about = document.getElementById('about');
 const blog = document.getElementById('blog');
