@@ -16,37 +16,37 @@
     </head>
     <body>
         <header id="myHeader">
-            
+
             <img id=landing-image src="https://i.pinimg.com/originals/b8/c0/30/b8c030136bde5a1e4f89ef6b4bbaf3ea.jpg" alt="programmer-workspace">
 
-            
+
             <div id="intro">
                 <h1>mikeLambert</h1>
-            </div>             
+            </div>
         </header>
             <nav>
                 <div id="mobile-nav">
                     <label for="hamburger">Checkbox for hamburger button</label>
                     <input type="checkbox" id="hamburger"/>
-                    <span class="hamburger"></span>                          
+                    <span class="hamburger"></span>
                     <div id="mobile-menu-content">
-                        <a href="#main">{ M:L }</a>            
+                        <a href="#main">{ M:L }</a>
                         <a href="#about">ABOUT</a>
-                        <a href="#portfolio">PROJECTS</a>
-                        <a href="#blog">BLOG</a>  
+                        <a href="#projects">PROJECTS</a>
+                        <a href="#blog">BLOG</a>
                         <a href="#contact">CONTACT</a>
-                    </div>    
+                    </div>
                 </div>
                 <div id="desktop-nav">
                     <a href="#about">ABOUT</a>
-                    <a href="#portfolio">PROJECTS</a>
-                    <a href="#main">{ M:L }</a>            
-                    <a href="#blog">BLOG</a>  
+                    <a href="#projects">PROJECTS</a>
+                    <a href="#main">{ M:L }</a>
+                    <a href="#blog">BLOG</a>
                     <a href="#contact">CONTACT</a>
-                </div>     
+                </div>
             </nav>
         <main>
-            <div id="about">
+            <section id="about">
                 <div id="about-intro" data-aos="fade-in">
                     <h1 class="section-title">{ Software Engineer }</h1>
                     <!-- <h1>Hi there, I'm Mike.</h1>
@@ -62,46 +62,46 @@
                         <h4>React</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-left">
-                        <img src="img/logos/redux.png" id="redux" alt="redux logo">                    
+                        <img src="img/logos/redux.png" id="redux" alt="redux logo">
                         <h4>Redux</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-right">
-                        <i class="fab fa-node" id="node"></i>     
-                        <h4>NodeJS</h4>               
+                        <i class="fab fa-node" id="node"></i>
+                        <h4>NodeJS</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-left">
                         <i class="fab fa-js" id="js"></i>
                         <h4>JavaScript</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-right">
-                        <i class="fab fa-html5" id="html"></i>                    
+                        <i class="fab fa-html5" id="html"></i>
                         <h4>HTML5</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-left">
-                        <i class="fab fa-css3-alt" id="css"></i>                    
+                        <i class="fab fa-css3-alt" id="css"></i>
                         <h4>CSS</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-right">
                         <img src="img/logos/postgresql.png" id="postgres" alt="postgresql logo">         <h4>PostgreSQL</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-left">
-                        <img src="img/logos/mongo.png" id="mongo" alt="mongo logo">  
-                        <h4>MongoDB</h4>                  
+                        <img src="img/logos/mongo.png" id="mongo" alt="mongo logo">
+                        <h4>MongoDB</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-right">
-                        <img src="img/logos/jest.png" id="jest" alt="jest logo">                 
+                        <img src="img/logos/jest.png" id="jest" alt="jest logo">
                         <h4>Jest</h4>
                     </div>
                     <div class="languages" data-aos="zoom-in-left">
-                        <i class="fab fa-git" id="git"></i>                    
+                        <i class="fab fa-git" id="git"></i>
                     </div>
                     <div class="languages" data-aos="zoom-in-right">
-                        <img src="img/logos/firebase.png" id="firebase" alt="firebase logo"> 
-                        <h4>Firebase</h4>                
+                        <img src="img/logos/firebase.png" id="firebase" alt="firebase logo">
+                        <h4>Firebase</h4>
                     </div>
                 </div>
 
-                <div id="study">    
+                <div id="study">
                     <h1 data-aos="fade-in" class="section-title">{ Student }</h1>
                     <div id="degrees">
                         <div class="schools" data-aos="flip-left">
@@ -122,9 +122,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="travel">
+            <section id="travel">
                 <h1 data-aos="fade-in" class="section-title">{ Global Citizen }</h1>
                 <h3 data-aos="fade-in">countriesLivedIn = [ Brazil, China, Mexico, Peru, USA ]</h3>
                 <div id="map" data-aos="fade-in">
@@ -139,19 +139,19 @@
                         <div class="dot dot-5"></div>
                     </div>
                 </div>
-                
+
                 <div id="human-languages">
                     <h1 data-aos="fade-in" class="section-title">{ Polyglot }</h1>
                     <h3 data-aos="fade-in">languagesSpoken = [ English, Mandarin, Portuguese, Spanish ]</h3>
                     <iframe width="55%" height="300vh" src="https://www.youtube.com/embed/xDnxZbRdYy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-aos="fade-in" title="Expressing myself in multiple languages"></iframe>
                 </div>
-            </div>
+            </section>
 
             <div id="overlay" class="hidden"></div>
-            
-            <h1 id="section-title" data-aos="fade-up">{ Projects }</h1>
-            <div id="portfolio">
-                <button class="project" data-aos="zoom-in-up">
+
+            <h1 id="section-title" id="projects" data-aos="fade-up">{ Projects }</h1>
+            <section id="portfolio">
+            <button class="project" data-aos="zoom-in-up">
                     <h3>Jeopardy For Educators</h3>
                     <div class="modal hidden">
                         <div class="project-details">
@@ -196,9 +196,9 @@
                         </div>
                         <img class="modal-image" src="./img/portfolio/pokedex.png" alt="cryptocurrency trading simulator screenshot" >
                     </div>
-                </button> 
-            </div>
-            <div id="blog">
+                </button>
+            </section>
+            <section id="blog">
                 <h1 data-aos="fade-in" class="section-title" data-aos="fade-in">{ Blog }</h1>
                 <div class="article" data-aos="zoom-in">
                     <a href="https://www.linkedin.com/pulse/simple-trick-accomplishing-long-medium-term-goals-mike-lambert-/">
@@ -217,16 +217,16 @@
                         <h3>Three Reasons Why Blended MBAs May Be Better Than Traditional MBAs</h3>
                         <img class="blog-image" src="img/blog/blended-mba.jpg" alt="Class photo">
                     </div>
-                </div>  
-            </div>
-            <div id="contact">
+                </div>
+            </section>
+            <section id="contact">
                 <h1 data-aos="fade-in" class="section-title" data-aos="fade-in">{ Contact }</h1>
                 <div class="icons">
                     <a id="gmail" href="mailto:mlamb128@gmail.com" data-aos="flip-left" aria-label="linkedin"><i class="far fa-envelope"></i></a>
                     <a id="linkedin" href="https://www.linkedin.com/in/mike-b-lambert/" data-aos="flip-right" aria-label="gmail"><i class="fab fa-linkedin-in"></i></a>
                     <a id=github href="https://github.com/MikeBLambert" data-aos="flip-left" aria-label="github"><i class="fab fa-github"></i></a>
                 </div>
-            </div>
+            </section>
 
         </main>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

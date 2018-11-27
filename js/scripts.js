@@ -4,11 +4,11 @@ const nav = document.getElementById('desktop-nav');
 function makeFixed() {
     if(window.pageYOffset >= header.offsetHeight) {
         nav.classList.add('fix');
-        portfolio.classList.add('portfolioOffset');
-        
+        // portfolio.classList.add('portfolioOffset');
+
     } else if (header.offsetHeight > window.pageYOffset) {
         nav.classList.remove('fix');
-        portfolio.classList.remove('portfolioOffset')
+        // portfolio.classList.remove('portfolioOffset')
     }
 }
 
@@ -45,7 +45,7 @@ for(let i=0; i<projects.length; i++) {
 
         Array.from(portfolio.children).forEach((element) => {
             if(element !== clickedProject) {
-                element.classList.add('hidden');   
+                element.classList.add('hidden');
             }
         })
     }
@@ -66,6 +66,3 @@ overlay.onclick = function() {
         element.childNodes[3].classList.remove('show-content');
     })
 }
-
-
-
